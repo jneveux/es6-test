@@ -1,0 +1,41 @@
+<div class="container">
+  <h1>{{ vm.name }}</h1>
+
+  <h2>{{vm.catName}}</h2>
+
+  <div class="form-inline">
+    <button ng-click="vm.getJobList()" class="btn btn-primary">Log jobs</button>
+    <input type="text" class="form-control" placeholder="Enter search" ng-disabled="vm.jobList.length === 0"
+           ng-model="vm.filterJob">
+  </div>
+  <md-content>
+    <md-card ng-repeat="job in vm.jobList | filter:vm.filterJob as results" class="col-xs-11 col-md-3 col-lg-3"
+      >
+      <div class="animate-repeat">
+        <md-card-header>
+          <md-card-avatar>
+            <md-icon md-svg-icon="icons/menu.svg">
+            </md-icon>
+          </md-card-avatar>
+          <md-card-header-text>
+            <span class="md-title">{{job.id}}</span>
+            <span class="md-subhead">{{job.title}}</span>
+          </md-card-header-text>
+        </md-card-header>
+
+        <md-card-title>
+          <p>Product</p>
+        </md-card-title>
+        <md-card-content layout-padding style="height:30em;overflow-y:auto">
+          <p ng-bind-html="job.description"></p>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button>Action 1</md-button>
+          <md-button>Action 2</md-button>
+        </md-card-actions>
+      </div>
+    </md-card>
+
+  </md-content>
+</div>
+</div>

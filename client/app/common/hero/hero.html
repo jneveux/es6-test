@@ -1,0 +1,12 @@
+<section class="hero">
+  <h1>This is the NG6 starter</h1>
+  <h3>You can find me inside {{ vm.name }}.html</h3>
+  <input type="checkbox" ng-model="vm.youClickedMe" class="form-control"/>
+  <button ng-click="vm.clickButton()" class="btn btn-default">Check</button>
+  <button ng-click="vm.unClick()" class="btn btn-primary">Un check</button>
+  <div flex-xs="" flex="50">
+  <md-checkbox ng-model="vm.youClickedMe" aria-label="Checkbox 1">
+    Checkbox 1: {{ vm.youClickedMe }}
+  </md-checkbox>
+    </div>
+</section>
