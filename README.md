@@ -1,1 +1,2 @@
-# Cloned from https://github.com/angularclass/NG6-starter.git
+# Cloned 
+from https://github.com/angularclass/NG6-starter.git
