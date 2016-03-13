@@ -4,7 +4,6 @@ import uiRouter from 'angular-ui-router';
 import Common from './common/common';
 import Components from './components/components';
 import AppComponent from './app.component';
-import material from 'angular-material';
 import message from 'angular-messages';
 import ngSanitize from 'angular-sanitize';
 import 'normalize.css';
@@ -17,7 +16,6 @@ angular.module('app', [
     Common.name,
     Components.name,
     ngSanitize,
-    material,
     blockUI,
     'smoothScroll'
   ])
